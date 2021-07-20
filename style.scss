@@ -1,0 +1,106 @@
+@import '/node_modules/normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/**
+ * Vars
+ */
+$primary: #198754;
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open sans', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/**
+ * Cookies window
+ */
+.cookies-alert {
+  background-color: #ddd;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  transform: translateY(100%);
+  transition: transform 0.2s ease;
+  font-size: 14px;
+
+  &.is-show {
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+  }
+
+  &__container {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 2fr;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+  &__title {
+    margin: 0 0 5px;
+  }
+
+  p {
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+  }
+
+  &__btn {
+    margin-left: 15px;
+  }
+}
+
+/**
+ * Buttons
+ */
+.btn {
+  background-color: transparent;
+  border-radius: 5px;
+  border: transparent;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color .2s ease;
+
+  &__primary {
+    background-color: $primary;
+    border-color: $primary;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    transition: background-color .2s ease;
+  }
+}
+
+/**
+ * Links
+ */
+a {
+  color: #2525cf;
+
+  &:hover {
+    color: #f60d0d;
+  }
+}

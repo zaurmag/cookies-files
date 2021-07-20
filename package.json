@@ -1,0 +1,15 @@
+{
+  "name": "notification-cookies",
+  "scripts": {
+    "start": "parcel serve index.html",
+    "build": "parcel build index.html --no-source-maps --no-optimize --public-url ./"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
+    "normalize.css": "latest",
+    "parcel": "next"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.1"
+  }
+}
